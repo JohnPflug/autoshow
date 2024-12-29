@@ -36,16 +36,21 @@ h1 {
 .autoBlur {
     font-size: 10vw;
     animation: autoBlurAnimation;
-    animation-timeline: view(10%);
+    animation-timeline: view();
     animation-fill-mode: both;
 }
 
 @keyframes autoBlurAnimation {
-    from {
-        filter: blur(40px);
+    0% {
+        filter: blur(50px);
     }
 
-    to {
+    45%,
+    55% {
         filter: blur(0);
+    }
+
+    100% {
+        filter: blur(50px);
     }
 }
